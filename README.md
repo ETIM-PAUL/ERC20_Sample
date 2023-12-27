@@ -1,13 +1,21 @@
-# Sample Hardhat Project
+# ERC20 Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+A smart contract that implements ERC20.
 
-Try running some of the following tasks:
+## Description
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+This is a simple ERC20 contract that implements the minting, burning and transferring of tokens between addresses.
+
+
+### Executing program
+
+Functions like minting tokens to different accounts by owner, burning of tokens as well as transferring of tokens.
+
+## Author
+
+Etim Paul E.
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details

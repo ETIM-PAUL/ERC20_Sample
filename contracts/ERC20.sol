@@ -34,6 +34,14 @@ contract JOETOKEN {
         return bal;
     }
 
+    function transfer(address recipient, uint amount) external returns (bool) {
+        require(balances[msg.sender] >= amount, "Insufficient Funds");
+        balances[msg.sender] -= amount;
+        balances[recipient] += amount;
+        emit Transfer(msg.sender, recipient, amount);
+        return true;
+    }
+
     function transferFrom(
         address sender,
         address recipient,
@@ -53,6 +61,7 @@ contract JOETOKEN {
     }
 
     function burn(uint amount) external {
+        require(balances[msg.sender] >= amount, "Insufficient Funds");
         balances[msg.sender] -= amount;
         total_supply -= amount;
         emit Transfer(msg.sender, address(0), amount);
